@@ -18,5 +18,19 @@ function resetBoard(){
 	done
 }
 
+#function is used to assign the letters to a player
+function assignSymbols(){
+randomChecksign=$(($RANDOM%2))
+	if [ $randomChecksign == 1 ]
+	then
+		sign=X
+	else
+		sign=O
+	fi
+		printf "player sign is :%s $sign"
+		read $sign
+}
+
 resetBoard
+assignSymbols
 
